@@ -13,3 +13,14 @@ RUN pnpm run build
 EXPOSE 4173
 
 ENTRYPOINT [ "pnpm", "run", "preview", "--host" ]
+
+# FROM alpine:latest AS runner
+# ARG PB_VERSION=0.25.8
+# WORKDIR /app
+
+# COPY --from=builder /app/pb_public ./pb_public
+
+# RUN apk add --no-cache \
+#     unzip \
+#     ca-certificates
+
