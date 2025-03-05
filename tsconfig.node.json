@@ -9,7 +9,9 @@
     /* Bundler mode */
     "moduleResolution": "Bundler",
     "moduleDetection": "force",
-    "erasableSyntaxOnly": true,
+    // Re-enable when everything supports TypeScript 5.8
+    // https://nodejs.org/en/learn/typescript/run-natively
+    // "erasableSyntaxOnly": true,
     "verbatimModuleSyntax": true,
     "noEmit": true,
 
