@@ -10,17 +10,26 @@ RUN pnpm install --frozen-lockfile
 COPY . .
 RUN pnpm run build
 
-EXPOSE 4173
+FROM alpine:latest AS runner
+ARG PB_VERSION=0.25.8
+WORKDIR /app
 
-ENTRYPOINT [ "pnpm", "run", "preview", "--host" ]
+RUN apk add --no-cache unzip
+RUN apk add --no-cache openssh
+RUN apk add --no-cache ca-certificates
 
-# FROM alpine:latest AS runner
-# ARG PB_VERSION=0.25.8
-# WORKDIR /app
+# Copy pocketbase from locally installed binary
+# remember to remove the binary from .dockerignore if you want to do this
+# COPY ./pocketbase /app/pocketbase
 
-# COPY --from=builder /app/pb_public ./pb_public
+ADD https://github.com/pocketbase/pocketbase/releases/download/v${PB_VERSION}/pocketbase_${PB_VERSION}_linux_amd64.zip /tmp/pb.zip
+RUN unzip /tmp/pb.zip -d /app
 
-# RUN apk add --no-cache \
-#     unzip \
-#     ca-certificates
+# Enable these when you have migrations / hooks
+# COPY --from=builder /app/pb_hooks ./pb_hooks
+# COPY --from=builder /app/pb_migrations ./pb_migrations
+COPY --from=builder /app/pb_public ./pb_public
 
+EXPOSE 8080
+
+CMD ["/app/pocketbase", "serve", "--http=0.0.0.0:8080"]
