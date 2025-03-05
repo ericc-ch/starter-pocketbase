@@ -4,5 +4,6 @@
   },
   "cSpell.words": [
     "pocketbase"
-  ]
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

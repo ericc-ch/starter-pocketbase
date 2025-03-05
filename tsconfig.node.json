@@ -9,7 +9,7 @@
     /* Bundler mode */
     "moduleResolution": "Bundler",
     "moduleDetection": "force",
-    // "erasableSyntaxOnly": true, Re-enable in 5.8
+    "erasableSyntaxOnly": true,
     "verbatimModuleSyntax": true,
     "noEmit": true,
 
