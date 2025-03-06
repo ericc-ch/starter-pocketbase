@@ -9,10 +9,12 @@ export const Navbar: React.FC = () => {
         </a>
       </div>
       <div className="flex-none">
-        <button className="btn-ghost btn-sm btn rounded-btn">
+        <button className="btn-ghost btn-sm btn rounded-btn" type="button">
           Get Started
         </button>
-        <button className="btn-ghost btn-sm btn rounded-btn">Github</button>
+        <button className="btn-ghost btn-sm btn rounded-btn" type="button">
+          Github
+        </button>
       </div>
     </div>
   )
