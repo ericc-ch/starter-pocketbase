@@ -7,8 +7,12 @@
   "scripts": {
     "build": "tsc -b && vite build",
     "dev": "tsx ./scripts/dev.ts",
-    "dev-unused": "node --experimental-strip-types ./scripts/dev.ts",
+    "dev:backend": "./pocketbase serve --dev",
+    "dev:frontend": "vite",
+    "dev:node": "node --experimental-strip-types ./scripts/dev.ts",
     "lint": "eslint .",
+    "routes:delete": "rm ./src/routeTree.gen.ts",
+    "prestart": "pnpm run build",
     "start": "./pocketbase serve"
   },
   "simple-git-hooks": {
@@ -30,6 +34,7 @@
   "devDependencies": {
     "@echristian/eslint-config": "^0.0.30",
     "@tailwindcss/typography": "^0.5.16",
+    "@tanstack/eslint-plugin-router": "^1.105.0",
     "@tanstack/router-devtools": "^1.112.17",
     "@tanstack/router-plugin": "^1.112.17",
     "@types/node": "^22.13.9",

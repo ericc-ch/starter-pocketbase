@@ -2,13 +2,13 @@ import concurrently from "concurrently"
 
 const result = concurrently([
   {
-    command: "vite",
-    name: "vite",
+    command: "pnpm run dev:frontend",
+    name: "frontend",
     prefixColor: "yellow",
   },
   {
-    command: "./pocketbase serve --dev",
-    name: "pb",
+    command: "pnpm run dev:backend",
+    name: "backend",
     prefixColor: "white",
   },
 ])
