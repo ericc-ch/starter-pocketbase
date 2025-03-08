@@ -24,6 +24,7 @@ RUN apk add --no-cache ca-certificates
 
 ADD https://github.com/pocketbase/pocketbase/releases/download/v${PB_VERSION}/pocketbase_${PB_VERSION}_linux_amd64.zip /tmp/pb.zip
 RUN unzip /tmp/pb.zip -d /app
+RUN rm /tmp/pb.zip
 
 # Enable these when you have migrations / hooks
 # COPY --from=builder /app/pb_hooks ./pb_hooks
