@@ -1,6 +1,4 @@
-import React from "react"
-
-export const Hero: React.FC = () => {
+export function Hero() {
   return (
     <section
       className="hero bg-contain"

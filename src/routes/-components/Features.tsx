@@ -1,6 +1,4 @@
-import React from "react"
-
-export const Features: React.FC = () => {
+export function Features() {
   return (
     <section className="bg-base-100 py-12">
       <div className="container mx-auto px-4">

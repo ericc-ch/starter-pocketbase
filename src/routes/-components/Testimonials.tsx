@@ -1,6 +1,4 @@
-import React from "react"
-
-export const Testimonials: React.FC = () => {
+export function Testimonials() {
   return (
     <section className="bg-base-300 text-base-content py-12">
       <div className="container mx-auto px-4 text-center">

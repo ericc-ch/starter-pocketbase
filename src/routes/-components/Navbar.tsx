@@ -1,6 +1,6 @@
-import React from "react"
+import { Link } from "@tanstack/react-router"
 
-export const Navbar: React.FC = () => {
+export function Navbar() {
   return (
     <div className="navbar bg-base-100">
       <div className="flex-1">
@@ -9,6 +9,12 @@ export const Navbar: React.FC = () => {
         </a>
       </div>
       <div className="flex-none">
+        <Link
+          to="/books/"
+          className="btn btn-ghost text-lg transition-transform hover:scale-105"
+        >
+          📚 Bookshelf
+        </Link>
         <button className="btn-ghost btn-sm btn rounded-btn" type="button">
           Get Started
         </button>
