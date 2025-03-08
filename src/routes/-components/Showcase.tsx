@@ -1,4 +1,5 @@
 import React from "react"
+import { ShowcaseItem } from "./ShowcaseItem"
 
 export const Showcase: React.FC = () => {
   return (
@@ -7,56 +8,31 @@ export const Showcase: React.FC = () => {
         <h2 className="mb-8 text-center text-3xl font-bold">
           🖼️ Projects (Slightly More Impressive Than "Hello World")
         </h2>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div className="card shadow-lg">
-            <div className="card-body">
-              <h3 className="card-title">Example Project 1</h3>
-              <p>A simple project showcasing basic features.</p>
-            </div>
-            <div className="card-body">
-              <h3 className="card-title">
-                To-Do List App: Still Relevant in 2023!
-              </h3>
-              <p>
-                The quintessential demo app. We've got you covered with adding,
-                deleting, and even (gasp!) marking tasks as complete.
-              </p>
-            </div>
-
-            <div className="card shadow-lg">
-              <div className="card-body">
-                <h3 className="card-title">Example Project 2</h3>
-                <p>A slightly more complex project demonstrating routing.</p>
-              </div>
-            </div>
-            <div className="card shadow-lg">
-              <div className="card-body">
-                <h3 className="card-title">
-                  Cat Photo Gallery: Because the Internet.
-                </h3>
-                <p>
-                  Browse a curated collection of... cat photos. Powered by
-                  cutting-edge technology (and maybe a Unsplash API).
-                </p>
-              </div>
-
-              <div className="card shadow-lg">
-                <div className="card-body">
-                  <h3 className="card-title">Example Project 3</h3>
-                  <p>An ambitious project showing state management.</p>
-                </div>
-                <div className="card-body">
-                  <h3 className="card-title">
-                    "Slightly More Complex" Blog: We Added Pagination!
-                  </h3>
-                  <p>
-                    Behold, a blog! With posts! And... pagination! We're pushing
-                    the boundaries of starter template technology here.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <ShowcaseItem
+            title="Example Project 1"
+            description="A simple project showcasing basic features."
+          />
+          <ShowcaseItem
+            title="To-Do List App: Still Relevant in 2023!"
+            description="The quintessential demo app. We've got you covered with adding, deleting, and even (gasp!) marking tasks as complete."
+          />
+          <ShowcaseItem
+            title="Example Project 2"
+            description="A slightly more complex project demonstrating routing."
+          />
+          <ShowcaseItem
+            title="Cat Photo Gallery: Because the Internet."
+            description="Browse a curated collection of... cat photos. Powered by cutting-edge technology (and maybe an Unsplash API)."
+          />
+          <ShowcaseItem
+            title="Example Project 3"
+            description="An ambitious project showing state management."
+          />
+          <ShowcaseItem
+            title="Slightly More Complex Blog: We Added Pagination!"
+            description="Behold, a blog! With posts! And... pagination! We're pushing the boundaries of starter template technology here."
+          />
         </div>
       </div>
     </section>
