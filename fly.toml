@@ -2,7 +2,7 @@ app = 'starter-pocketbase'
 primary_region = 'sin'
 
 [mounts]
-source = "pb_data"
+source = "starter_pb_data"
 destination = "/app/pb_data"
 
 [build]
