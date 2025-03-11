@@ -10,8 +10,8 @@ export function Navbar() {
       </div>
       <div className="flex-none">
         <Link
-          to="/books/"
           className="btn btn-ghost text-lg transition-transform hover:scale-105"
+          to="/books"
         >
           📚 Bookshelf
         </Link>
